@@ -1,24 +1,25 @@
-/* 
 
-*/
 let humanScore = 0;
 let globalScore = 0;
 function getComputerChoice() {
     let choiceNum = Math.round(Math.random() * 2);
     console.log(choiceNum);
     if(choiceNum === 0) {
-        return "Rock";
+        return "rock";
     }
     else if(choiceNum === 1) {
-        return "Paper";
+        return "paper";
     }
     else {
-        return "Scissors";
+        return "scissors";
     }
 }
 function getHumanChoice() {
-    let choice = prompt("Choose Rock, Paper, or Scissors", "Rock");
-    return choice;
+    let choice = prompt("Choose rock, paper, or scissors", "rock");
+    return choice.toLowerCase();
+}
+function playRound(humanChoice, computerChoice) {
+
 }
 console.log(getHumanChoice());
 console.log(getComputerChoice());
