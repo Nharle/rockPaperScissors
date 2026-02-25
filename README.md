@@ -1,0 +1,1 @@
+First odin project javascript project. I think this project will teach me about how to build a JS program from scratch/handling debugging. 
