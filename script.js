@@ -1,6 +1,6 @@
 
 let humanScore = 0;
-let globalScore = 0;
+let computerScore = 0;
 function getComputerChoice() {
     let choiceNum = Math.round(Math.random() * 2);
     console.log(choiceNum);
@@ -19,7 +19,17 @@ function getHumanChoice() {
     return choice.toLowerCase();
 }
 function playRound(humanChoice, computerChoice) {
-
+    //Human win conditions
+    if(humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "paper" && computerChoice === "rock" || humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore += 1;
+        console.log(`You Win! ${humanChoice} beats ${computerChoice}! `);
+    } 
+    else {
+        computerScore += 1;
+        console.log(`You Lose! ${computerChoice} beats ${humanChoice}!`);
+        
+    }
 }
-console.log(getHumanChoice());
-console.log(getComputerChoice());
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
