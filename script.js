@@ -3,7 +3,6 @@ let humanScore = 0;
 let computerScore = 0;
 function getComputerChoice() {
     let choiceNum = Math.round(Math.random() * 2);
-    console.log(choiceNum);
     if(choiceNum === 0) {
         return "rock";
     }
