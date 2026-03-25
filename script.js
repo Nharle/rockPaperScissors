@@ -1,4 +1,6 @@
 
+const btns = document.querySelector("#buttons")
+
 let humanScore = 0;
 let computerScore = 0;
 function getComputerChoice() {
@@ -39,9 +41,20 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 function playGame(hScore,cScore) {
+    btns.addEventListener("click", (event) => {
+        let target = event.target;
+        switch(target.id) {
+            case "rock":
+                break;
+            case "paper":
+                break;
+            case "scissors":
+                break;
+        }
+    });
     let c = 0;
 
-    while (c < 5) {
+    while (c) {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         playRound(humanChoice,computerChoice);
