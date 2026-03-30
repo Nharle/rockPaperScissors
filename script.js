@@ -7,9 +7,10 @@ let finalResult = document.createElement("p");
 let humanScore = 0;
 let computerScore = 0;
 
+scores.classList.add("scores");
 scoreResult.textContent = `Score: ${humanScore} - ${computerScore}`;
-
 scores.append(roundResult, scoreResult, finalResult);
+
 
 function getComputerChoice() {
     let choiceNum = Math.floor(Math.random() * 3);
