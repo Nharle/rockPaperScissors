@@ -19,3 +19,15 @@ body {
     text-decoration:none;
     text-align:center;
 }
+.buttons {
+    min-height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+}
+.button {
+    width: 268px;
+    height: 268px;
+    border-radius:8px;
+}

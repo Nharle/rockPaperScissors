@@ -1,5 +1,5 @@
 
-let btns = document.querySelector("#buttons");
+let btns = document.querySelector(".buttons");
 let scores = document.querySelector("#scores");
 let reset = document.querySelector("#reset");
 let resetBtn = document.createElement("button");
