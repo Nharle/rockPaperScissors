@@ -31,3 +31,7 @@ body {
     height: 268px;
     border-radius:8px;
 }
+#paper {
+    height:225px;
+    width:225px;
+}
