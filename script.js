@@ -47,7 +47,7 @@ function buttonClick(event) {
     let target = event.target;
     let computerChoice = getComputerChoice();
     let humanChoice = target.id;
-    playRound(humanChoice,computerChoice);
+    if(humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") playRound(humanChoice,computerChoice);
     if(humanScore === 5) {
         finalResult.textContent = `Human player wins with score ${humanScore} - ${computerScore}`;
         btns.removeEventListener("click", buttonClick);

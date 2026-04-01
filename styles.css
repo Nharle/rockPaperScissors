@@ -35,3 +35,8 @@ body {
     height:225px;
     width:225px;
 }
+.results {
+    display:flex;
+    justify-content: center;
+    text-align:center;
+}
