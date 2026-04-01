@@ -1,6 +1,8 @@
 
 let btns = document.querySelector("#buttons");
 let scores = document.querySelector("#scores");
+let reset = document.querySelector("#reset");
+let resetBtn = document.createElement("button");
 let roundResult = document.createElement("p");
 let scoreResult = document.createElement("p");
 let finalResult = document.createElement("p");
@@ -49,11 +51,28 @@ function buttonClick(event) {
     if(humanScore === 5) {
         finalResult.textContent = `Human player wins with score ${humanScore} - ${computerScore}`;
         btns.removeEventListener("click", buttonClick);
+        resetBtn.classList.add("reset");
+        resetBtn.textContent = "Reset game";
+        resetBtn.addEventListener("click", resetClick);
+        reset.append(resetBtn);
     }
     else if(computerScore === 5) {
         finalResult.textContent = `Computer wins with score ${computerScore} - ${humanScore}`;
         btns.removeEventListener("click", buttonClick);
+        resetBtn.classList.add("reset");
+        resetBtn.textContent = "Reset game";
+        resetBtn.addEventListener("click", resetClick);
+        reset.append(resetBtn);
     }
+}
+function resetClick() {
+    computerScore = 0;
+    humanScore = 0;
+    scoreResult.textContent = `Score: ${humanScore} - ${computerScore}`;
+    roundResult.textContent = "";
+    finalResult.textContent = "";
+    reset.removeChild(resetBtn);
+    playGame();
 }
 function playGame() {
     
